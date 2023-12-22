@@ -1,0 +1,26 @@
+.about-screen{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.about-screen h1{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.about-section{
+    /* border: 2px solid blueviolet; */
+    height: 400px;
+    width: 100%;
+    padding: 10px;
+}
+.about-section p{
+    font-size: 28px;
+}
+
