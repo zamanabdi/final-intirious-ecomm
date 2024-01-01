@@ -28,13 +28,13 @@ padding: 20px 80px;
 .productScreen-img{
     /* border:2px solid yellow; */
     width: 50%;
-    height: 100%;
+    height: 600px;
 }
 
 .productScreen-img img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .productScreen-details{

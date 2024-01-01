@@ -126,6 +126,7 @@ const ProductScreen = () => {
                 </div>
 
                 {product.countInStock > 0 && (
+                  <div style={{display:"flex",alignItems:"center"}}>
                   <ListGroup.Item>
                     <Row>
                       <Col>Qty</Col>
@@ -145,6 +146,8 @@ const ProductScreen = () => {
                       </Col>
                     </Row>
                   </ListGroup.Item>
+                  </div>
+                  
                 )}
 
                 {/* product description */}
