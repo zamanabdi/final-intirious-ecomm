@@ -46,7 +46,7 @@ const OrderScreen = () => {
   ) : error ? (
     <Message variant="danger" />
   ) : (
-    <div style={{width:"100%"}}>
+    <div style={{width:"100%",border:"2px solid brown",padding:"15px"}}>
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>
