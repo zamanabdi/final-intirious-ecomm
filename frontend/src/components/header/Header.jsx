@@ -12,6 +12,8 @@ import { logout } from "../../slices/authSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { categoryData } from "../../categoryData/CategoryData";
+import { resetCart } from "../../slices/cartSlice";
+
 
 const Header = () => {
  
@@ -28,6 +30,7 @@ const Header = () => {
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
+      dispatch(resetCart());
       navigate("/login");
 
       
@@ -54,13 +57,13 @@ const Header = () => {
         <NavDropdown title='Categories' id='category'>
 
         {
-          categoryData.map((item,index) => {
+          categoryData?.map((item,index) => {
 
             return(
 
-          <LinkContainer id={item.id} key={index} to={`/category/${item.categoryName}`} >
+          <LinkContainer id={item?.id} key={index} to={`/category/${item?.categoryName}`} >
             <NavDropdown.Item>
-              {item.categoryTitle}
+              {item?.categoryTitle}
 
             </NavDropdown.Item>
           </LinkContainer>

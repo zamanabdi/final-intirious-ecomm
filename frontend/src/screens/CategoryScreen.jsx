@@ -12,7 +12,7 @@ const CategoryScreen = () => {
 
   useEffect(() => {
     window.scrollTo(0,0)
-   },[products.category]);
+   },[products?.category]);
 
 
   return (
@@ -35,9 +35,9 @@ const CategoryScreen = () => {
           Shop By Category
         </h1>
         <div className="home-wrapper">
-          {products.filter((item) => {
+          {products?.filter((item) => {
             return(
-              item.category === params.categoryName
+              item?.category === params?.categoryName
             )
           }).map((product) => {
             return <Product product={product} />;

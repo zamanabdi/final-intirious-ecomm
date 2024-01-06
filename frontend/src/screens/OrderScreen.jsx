@@ -44,9 +44,9 @@ const OrderScreen = () => {
   return isLoading ? (
     <Loader />
   ) : error ? (
-    <Message variant="danger" />
+    <Message variant="danger">{error?.data?.message || error.error}</Message>
   ) : (
-    <div style={{width:"100%",border:"2px solid brown",padding:"15px"}}>
+    <div style={{width:"100%",padding:"15px"}}>
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>
@@ -95,13 +95,13 @@ const OrderScreen = () => {
                     <Col>
                       <Link
                         style={{ textDecoration: "none" }}
-                        to={`/product/${item.product}`}
+                        to={`/product/${item?.product}`}
                       >
                         {item.name}
                       </Link>
                     </Col>
                     <Col md={4}>
-                      {item.qty} x &#8377;{item.price} = &#8377;{item.qty * item.price}
+                      {item.qty} x &#8377;{item?.price} = &#8377;{item.qty * item?.price}
                     </Col>
                   </Row>
                 </ListGroup.Item>
@@ -118,7 +118,7 @@ const OrderScreen = () => {
               <ListGroup.Item>
                 <Row>
                   <Col>Items</Col>
-                  <Col>&#8377;{order.itemsPrice}</Col>
+                  <Col>&#8377;{order?.itemsPrice}</Col>
                 </Row>
                 <Row>
                   <Col>Shipping</Col>
@@ -133,6 +133,8 @@ const OrderScreen = () => {
                   <Col>&#8377;{order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
+
+
               {/* PAY ORDER PALCEHOLDER */}
 
               {loadingDeliver && <Loader />}
