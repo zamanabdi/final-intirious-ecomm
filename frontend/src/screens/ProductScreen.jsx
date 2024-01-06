@@ -90,7 +90,7 @@ const ProductScreen = () => {
             <div className="productScreen-content">
               {/* product image */}
               <div className="productScreen-img">
-                <img src={product.image} />
+                <img src={product?.image} />
               </div>
 
               {/* product details */}
@@ -102,30 +102,30 @@ const ProductScreen = () => {
 
                 {/* product title */}
                 <div className="productScreen-title">
-                  <h2>{product.name}</h2>
+                  <h2>{product?.name}</h2>
                 </div>
 
                 {/* star rating */}
                 <div className="productScreen-star">
                   <Rating
-                    value={product.rating}
-                    text={`${product.numReviews} Reviews`}
+                    value={product?.rating}
+                    text={`${product?.numReviews} Reviews`}
                   />
                 </div>
 
                 {/* product price */}
                 <div className="productScreen-price">
-                  &#8377;{product.price}
+                  &#8377;{product?.price}
                 </div>
 
                 {/* product status */}
                 <div className="productScreen-status">
                   <span>
-                    {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
+                    {product?.countInStock > 0 ? "In Stock" : "Out Of Stock"}
                   </span>
                 </div>
 
-                {product.countInStock > 0 && (
+                {product?.countInStock > 0 && (
                   <div style={{display:"flex",alignItems:"center"}}>
                   <ListGroup.Item>
                     <Row>
@@ -151,7 +151,7 @@ const ProductScreen = () => {
                 )}
 
                 {/* product description */}
-                <div className="productScreen-desc">{product.description}</div>
+                <div className="productScreen-desc">{product?.description}</div>
 
                 {/* add to cart button */}
                 <div className="addCart-btn">
@@ -261,11 +261,11 @@ const ProductScreen = () => {
           Related Products
         </h1>
         <div className="home-wrapper">
-          {products.filter((item) => {
+          {products?.filter((item) => {
             return(
-              item._id !== product._id && item.category === product.category
+              item?._id !== product?._id && item?.category === product?.category
             )
-          }).map((product) => {
+          })?.map((product) => {
             return <Product product={product} />;
           })}
         </div>
