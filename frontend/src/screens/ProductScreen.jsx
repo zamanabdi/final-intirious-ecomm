@@ -68,9 +68,13 @@ const ProductScreen = () => {
     }
   }
 
-  useEffect(() => {
- console.log(product)
-  },[product])
+//   useEffect(() => {
+//  console.log(product)
+//   },[product])
+
+useEffect(() => {
+window.scrollTo(0,0);
+},[product]);
 
   return (
     <>
