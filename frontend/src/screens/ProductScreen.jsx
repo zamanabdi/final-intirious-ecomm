@@ -126,11 +126,11 @@ const ProductScreen = () => {
                 </div>
 
                 {product?.countInStock > 0 && (
-                  <div style={{display:"flex",alignItems:"center"}}>
+                  <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                   <ListGroup.Item>
                     <Row>
                       <Col>Qty</Col>
-                      <Col>
+                      <div>
                         {" "}
                         <Form.Control
                           as="select"
@@ -143,7 +143,7 @@ const ProductScreen = () => {
                             </option>
                           ))}
                         </Form.Control>{" "}
-                      </Col>
+                      </div>
                     </Row>
                   </ListGroup.Item>
                   </div>

@@ -67,7 +67,7 @@ const CartScreen = () => {
                     <div className="cartItem-price">&#8377;{item.price}</div>
 
                     {/* set the quantity */}
-                    <div className="cartItem-qty">
+                    <div className="cartItem-qty" style={{display:"flex",flexShrink:"0",width:"80px"}}>
                       <Form.Control
                         as="select"
                         value={item.qty}
