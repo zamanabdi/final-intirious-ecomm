@@ -17,7 +17,7 @@ header{
 }
 
 .nav-menu{
-    width: 700px;
+    width: 800px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -92,7 +92,7 @@ header{
         background-color: white;
         
         padding: 10px;
-        height: 400px;
+        height: 550px;
         gap: 30px;
         animation: slideDown 1s ease;
         transition: all 1s ease;

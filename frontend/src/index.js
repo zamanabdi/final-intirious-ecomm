@@ -28,6 +28,7 @@ import ReturnPolicy from './screens/ReturnPolicy.jsx';
 import PrivacyPolicy from './screens/PrivacyPolicy.jsx';
 import ContactScreen from './screens/ContactScreen.jsx';
 import AboutScreen from './screens/AboutScreen.jsx';
+import ServicesScreen from './screens/ServicesScreen.jsx';
 
 
 
@@ -45,6 +46,7 @@ const router = createBrowserRouter(
     <Route path='/returnpolicy' element={<ReturnPolicy/>}/>
     <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
     <Route path='/contactus' element={<ContactScreen/>}/>
+    <Route path='/services' element={<ServicesScreen/>}/>
     <Route path='/about' element={<AboutScreen/>}/>
   {/*<Route path='/verify' element={<VerifyScreen/>} />*/}
     

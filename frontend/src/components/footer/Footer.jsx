@@ -12,6 +12,7 @@ const Footer = () => {
 
       <div className="f-links">
       <span onClick={() => navigate('/about')}>About Us</span>
+      <span onClick={() => navigate('/services')}>Services</span>
       <span onClick={() => navigate('/contactus')}>Contact</span>
       <span onClick={() => navigate('/privacypolicy')}>Privacy Policy</span>
       <span onClick={() => navigate('/returnpolicy')}>Return Policy</span>

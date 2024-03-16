@@ -54,6 +54,7 @@ const Header = () => {
         <span onClick={() =>navigate("/")}>Home</span>
         <span onClick={() => navigate("/about")}>About</span>
         <span onClick={() => navigate('/contactus')}>Contact Us</span>
+        <span onClick={() => navigate('/services')}>Services</span>
         <NavDropdown title='Categories' id='category'>
 
         {
@@ -145,8 +146,10 @@ const Header = () => {
       setOpen(!open)}}>Home</span>
         <span onClick={() => {navigate("/about")
       setOpen(!open)}}>About</span>
-        <span onClick={() => {navigate('/contactus')
+        <span onClick={() => {navigate("/contactus")
       setOpen(!open)}}>Contact Us</span>
+        <span onClick={() => {navigate('/services')
+      setOpen(!open)}}>Services</span>
         <NavDropdown title='Categories' id='category'>
 
         {

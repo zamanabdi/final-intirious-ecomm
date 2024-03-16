@@ -46,7 +46,7 @@ const HomeScreen = () => {
   return (
     <>
       {/* homescreen banner slider */}
-      <Carousel infiniteLoop={true} autoPlay={true} showIndicators={true} showStatus={false} showThumbs={false}>
+      <Carousel autoPlay={true} showIndicators={true} showStatus={false} showThumbs={false} interval={5000} transitionTime={1000} infiniteLoop={true} swipeable>
 
         <div>
           <img src={first} />
